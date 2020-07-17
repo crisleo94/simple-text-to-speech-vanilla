@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+body {
+  background-image: linear-gradient(to right, #141E30, #243B55);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: 'Ranchers', cursive;
+  letter-spacing: 10px;
+  color: white;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, .5), 5px 5px 15px black;
+  cursor: default;
+}
+
+#btnSpeak {
+  height: 155px;
+  font-weight: bolder;
+  box-shadow: 5px 5px 20px 1px black;
+}
+
+span {
+  background-color: #243B55 !important;
+  color: white !important;
+  cursor: default;
+}
+
+select {
+  background-color: #56718f !important;
+  color: white !important;
+}
+
+textarea {
+  background-color: #56718f !important;
+  color: white !important;
+}
+
+input {
+  background-color: #56718f !important;
+  color: white !important;
+}
+
+.input-group {
+  box-shadow: 0px 1px 25px 1px black;
+}
+
+#selectVoice {
+  box-shadow: 10px 10px 15px black;
+}

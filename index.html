@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Speaker Partner</title>
+</head>
+<body>
+  
+  <section class="container-fluid">
+    <article>
+      <div class="container mt-5">
+        <h1 class="text-center font-weight-bold">SPEAKER PARTNER</h1>
+      </div>
+    </article>
+    <article class="container row mt-5">
+      <div class="mb-3 col-4">
+        <select name="selectVoice" id="selectVoice" class="form-select">
+          <option selected>Open to select a voice</option>
+        </select>
+        <p class="selectedVoice mt-2"></p>
+      </div>
+    </article>
+    <article class="container row mt-5">
+      <div class="col-4">
+        <div class="input-group">
+          <span class="input-group-text">Enter your text:</span>
+          <textarea class="form-control" id="textToSpeak"></textarea>
+        </div>
+        <div class="input-group mt-3">
+          <span class="input-group-text">Enter Pitch: </span>
+          <input type="text" class="form-control" id="pitch" value="0">
+        </div>
+        <div class="input-group mt-3">
+          <span class="input-group-text">Enter Speed: </span>
+          <input type="text" class="form-control" id="rate" value="1">
+        </div>
+      </div>
+      <div class="container mt-2 col-8">
+        <button
+          id="btnSpeak"
+          type="button"
+          class="btn btn-dark btn-lg"
+          onclick="textToSpeech()">
+            Speak It!
+        </button>
+      </div>
+    </article>
+  </section>
+
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+</html>
