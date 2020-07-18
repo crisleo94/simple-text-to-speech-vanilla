@@ -17,12 +17,6 @@ navigator.permissions.query({ name: 'microphone' })
     }
   })
 
-navigator.mediaDevices.getUserMedia({ audio: true })
-  .then((stream) => {
-    let audioMp3 = new MediaRecorder(stream)
-    console.log(stream)
-  })
-
 const populateVoiceList = () => {
   voices = synth.getVoices()
 
@@ -71,5 +65,10 @@ const textToSpeech = () => {
 
     
     textArea.blur()
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then((stream) => {
+        let audioMp3 = new MediaRecorder(stream)
+        console.log(audioMp3)
+      })
   }
 }
