@@ -7,6 +7,14 @@ const voiceSelector = document.querySelector('select')
 
 let voices = []
 
+navigator.permissions.query({ name: 'microphone' })
+  .then(({ state }) => {
+    if(state === 'granted') {
+      console.log('Have acces to the microphone.', state)
+    } else {
+      console.log('Request access to the microphone.', state)
+    }
+  })
 const populateVoiceList = () => {
   voices = synth.getVoices()
 
@@ -55,5 +63,10 @@ const textToSpeech = () => {
 
     
     textArea.blur()
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then((stream) => {
+        let audioMp3 = new MediaRecorder(stream)
+        console.log(audioMp3)
+      })
   }
 }
